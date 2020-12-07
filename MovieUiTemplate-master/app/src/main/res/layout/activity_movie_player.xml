@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.MoviePlayerActivity"
+    android:background="@color/layer_bg">
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/movie_exo_player"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/video_player_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shutter_background_color="@color/shutter_bg">
+
+    </com.google.android.exoplayer2.ui.PlayerView>
+
+
+
+</android.support.constraint.ConstraintLayout>
