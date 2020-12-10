@@ -10,8 +10,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.Adapter;
+import android.widget.Filter;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.Toast;
+
 
 import com.blogapp.aws.movieuitemplate.models.Movie;
 import com.blogapp.aws.movieuitemplate.adapters.MovieAdapter;
@@ -26,7 +33,7 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class HomeActivity extends AppCompatActivity implements MovieItemClickListener {
+public class    HomeActivity extends AppCompatActivity implements MovieItemClickListener {
 
     private List<Slide> lstSlides ;
     private ViewPager sliderpager;
@@ -133,8 +140,26 @@ public class HomeActivity extends AppCompatActivity implements MovieItemClickLis
         }
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        MenuItem item=menu.findItem(R.id.action_search);
+        SearchView searchView=(SearchView) item.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+
+                return false;
+            }
+        });
 
 
-
-
+        return super.onCreateOptionsMenu(menu);
+    }
 }
