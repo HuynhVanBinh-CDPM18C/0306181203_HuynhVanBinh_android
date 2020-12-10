@@ -88,6 +88,4 @@ public class Movie {
     public void setStreamingLink(String streamingLink) {
         this.streamingLink = streamingLink;
     }
-
-
 }
