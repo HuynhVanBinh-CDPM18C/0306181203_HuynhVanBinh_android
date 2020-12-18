@@ -38,6 +38,8 @@ public class HomeActivity extends AppCompatActivity implements MovieItemClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
+
         iniView();
         iniSlider();
         iniPopularMovies();

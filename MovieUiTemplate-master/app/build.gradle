@@ -11,11 +11,12 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.blogapp.aws.movieuitemplate"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -39,5 +40,6 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.6.1'
     //exoplayer library
     implementation 'com.google.android.exoplayer:exoplayer:2.9.6'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
 
 }
