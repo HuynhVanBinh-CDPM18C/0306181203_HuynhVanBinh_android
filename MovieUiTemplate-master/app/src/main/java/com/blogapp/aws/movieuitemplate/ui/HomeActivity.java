@@ -20,6 +20,7 @@ import com.blogapp.aws.movieuitemplate.R;
 import com.blogapp.aws.movieuitemplate.models.Slide;
 import com.blogapp.aws.movieuitemplate.adapters.SliderPagerAdapter;
 import com.blogapp.aws.movieuitemplate.ulist.DataSource;
+import com.blogapp.aws.movieuitemplate.login.login_activity;
 
 import java.util.ArrayList;
 import java.util.List;
