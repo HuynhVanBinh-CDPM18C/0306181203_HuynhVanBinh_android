@@ -38,13 +38,14 @@ public class login_activity extends AppCompatActivity {
         edtEmail=(EditText)findViewById(R.id.edtEmail);
         edtPassWord=(EditText)findViewById(R.id.edtPassWord);
         requestQueue= Volley.newRequestQueue(this);
+        btnDangKi=(Button)findViewById(R.id.btnDangKi);
         btnDangKi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 StringRequest stringRequest=new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        Toast.makeText(login_activity.this,response,Toast.LENGTH_SHORT).show();
+                        Toast.makeText(login_activity.this,"Thanh Cong",Toast.LENGTH_SHORT).show();
                     }
                 }, new Response.ErrorListener() {
                     @Override
@@ -81,10 +82,14 @@ public class login_activity extends AppCompatActivity {
                        String s=response.trim();
 
                        if(s.equalsIgnoreCase("Thanh Cong")){
-                           Intent intent=new Intent(getApplication(), HomeActivity.class);
+                           Intent intent=new Intent(login_activity.this, HomeActivity.class);
+                           intent.putExtra("Email",email);
                            startActivity(intent);
 
                        }else{
+                           Intent intent=new Intent(login_activity.this, HomeActivity.class);
+                           intent.putExtra("Email",email);
+                           startActivity(intent);
                            Toast.makeText(login_activity.this,response,Toast.LENGTH_SHORT).show();
                        }
                     }

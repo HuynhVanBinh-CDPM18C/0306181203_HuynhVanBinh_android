@@ -38,6 +38,9 @@ public class HomeActivity extends AppCompatActivity implements MovieItemClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        Intent intent=getIntent();
+        String email= intent.getStringExtra("Email");
+
 
 
 
