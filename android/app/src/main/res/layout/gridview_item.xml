@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView_Movie"
+        android:layout_width="209dp"
+        android:layout_height="264dp"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/trang" />
+
+    <TextView
+        android:id="@+id/tv_TheLoai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_TenPhim"
+        android:layout_marginTop="6dp"
+        android:text="Thể loại"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_TenPhim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tên phim"
+        android:textSize="18sp"
+        android:layout_below="@+id/imageView_Movie" />
+
+    <TextView
+        android:id="@+id/tv_DoTuoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Độ tuổi"
+        android:textSize="18sp"
+        android:layout_below= "@id/tv_TheLoai" />
+
+    <TextView
+        android:id="@+id/tv_DiemSo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điểm số"
+        android:textSize="18sp"
+        android:layout_below= "@+id/tv_DoTuoi"/>
+
+    <TextView
+        android:id="@+id/change_TenPhim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView_Movie"
+        android:layout_marginLeft="8dp"
+        android:layout_toRightOf="@+id/tv_TenPhim"
+        android:text="textview"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/change_TheLoai"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_TenPhim"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@+id/tv_TheLoai"
+        android:text="textview"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/change_DoTuoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_TheLoai"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@+id/tv_DoTuoi"
+        android:text="textview"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/change_DiemSo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/change_DoTuoi"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="0dp"
+        android:layout_toRightOf="@+id/tv_DiemSo"
+        android:text="textview"
+        android:textSize="18sp" />
+</RelativeLayout>

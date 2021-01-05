@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/trangchu"
+            android:icon="@drawable/home"
+            android:title="Trang Chủ" />
+        <item
+            android:id="@+id/danhsachphim"
+            android:icon="@android:drawable/ic_input_add"
+            android:title="Danh Sách Phim" />
+        <item
+            android:id="@+id/thongtin"
+            android:icon="@drawable/thongtin"
+            android:title="Thông Tin Cá Nhân" />
+        <item
+            android:id="@+id/giaodich"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Lịch Sử Giao Dịch" />
+        <item
+            android:icon="@android:drawable/ic_lock_lock"
+            android:title="Đăng Nhập" />
+    </group>
+</menu>
