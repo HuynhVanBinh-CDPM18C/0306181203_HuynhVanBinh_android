@@ -41,7 +41,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class MainActivity extends AppCompatActivity {
+public class trangchu extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private Intent intent;
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        rv_phimdangchieu1.setAdapter(new danhsachphimAdapter(users, MainActivity.this));
+                        rv_phimdangchieu1.setAdapter(new danhsachphimAdapter(users, trangchu.this));
                     }
                 });
             }
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        rv_phimsapchieu1.setAdapter(new phimsapchieuAdapter(user, MainActivity.this));
+                        rv_phimsapchieu1.setAdapter(new phimsapchieuAdapter(user, trangchu.this));
                     }
                 });
             }
@@ -144,19 +144,19 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.trangchu: {
-                        intent = new Intent(MainActivity.this, MainActivity.class);
+                        intent = new Intent(trangchu.this, MainActivity.class);
                         break;
                     }
                     case R.id.thongtin: {
-                        intent = new Intent(MainActivity.this, thongtincanhan.class);
+                        intent = new Intent(trangchu.this, thongtincanhan.class);
                         break;
                     }
                     case R.id.giaodich: {
-                        intent = new Intent(MainActivity.this, lichsugiaodich.class);
+                        intent = new Intent(trangchu.this, lichsugiaodich.class);
                         break;
                     }
                     case R.id.danhsachphim:{
-                        intent=new Intent(MainActivity.this, danhsachphimMain.class);
+                        intent=new Intent(trangchu.this, danhsachphimMain.class);
                         break;
                     }
                 }
