@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trangchu);
+
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         RecyclerView rv_phimdangchieu1 = (RecyclerView) findViewById(R.id.rv_phimdangchieu);
@@ -64,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Tạo request lên server.
         Request request = new Request.Builder()
-                .url("http:/192.168.1.150:8080/api1/api.php")
+                .url("http://192.168.88.105/api1/api.php")
                 .build();
 
 
@@ -100,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Tạo request lên server.
         Request sapchieu = new Request.Builder()
-                .url("http://192.168.1.150:8080/api1/apiphimsapchieu.php")
+                .url("http://192.168.88.105/api1/apiphimsapchieu.php")
                 .build();
 
         // Khởi tạo OkHttpClient để lấy dữ liệu.
