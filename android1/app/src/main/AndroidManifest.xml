@@ -12,9 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo1111">
+        <activity android:name=".DangKi"></activity>
         <activity android:name=".chitietphim" />
-        <activity android:name=".danhsachphim.danhsachphimMain"/>
-            <activity android:name=".lichsugiaodich.lichsugiaodich" />
+        <activity android:name=".danhsachphim.danhsachphimMain" />
+        <activity android:name=".lichsugiaodich.lichsugiaodich" />
         <activity android:name=".thongtincaNhan.thongtincanhan" />
         <activity android:name=".MainActivity">
             <intent-filter>
