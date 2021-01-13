@@ -14,13 +14,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
+import com.example.demo11_11.dangky.DangKi;
 import com.example.demo11_11.danhsachphim.danhsachphim;
 import com.example.demo11_11.danhsachphim.danhsachphimAdapter;
 import com.example.demo11_11.danhsachphim.danhsachphimMain;
 import com.example.demo11_11.danhsachphim.phimsapchieu;
 import com.example.demo11_11.danhsachphim.phimsapchieuAdapter;
-import com.example.demo11_11.lichsugiaodich.lichsugiaodich;
-import com.example.demo11_11.thongtincaNhan.thongtincanhan;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import com.squareup.moshi.Types;
@@ -52,6 +51,10 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()){
                     case R.id.danhsachphim:{
                         startActivity(new Intent(MainActivity.this, danhsachphimMain.class));
+                        break;
+                    }
+                    case R.id.dangky:{
+                        startActivity(new Intent(MainActivity.this, DangKi.class));
                         break;
                     }
                 }
