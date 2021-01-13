@@ -15,6 +15,7 @@ import android.view.MenuItem;
 
 
 import com.example.demo11_11.dangky.DangKi;
+import com.example.demo11_11.dangnhap.dangnhap;
 import com.example.demo11_11.danhsachphim.danhsachphim;
 import com.example.demo11_11.danhsachphim.danhsachphimAdapter;
 import com.example.demo11_11.danhsachphim.danhsachphimMain;
@@ -55,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                     case R.id.dangky:{
                         startActivity(new Intent(MainActivity.this, DangKi.class));
+                        break;
+                    }
+                    case R.id.dangnhap:{
+                        startActivity(new Intent(MainActivity.this, dangnhap.class));
                         break;
                     }
                 }
