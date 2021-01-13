@@ -50,7 +50,7 @@ public class DangKi extends AppCompatActivity {
                 try {
                     String result=new APIInsert(getApplication()).execute(s).get();
                     if (result.equals("true")) {
-                        Toast.makeText(getApplicationContext(), "Insert done ", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Tạo tài khoản thành công ", Toast.LENGTH_LONG).show();
                     }
                     else {
                         Toast.makeText(getApplicationContext(),"Thêm Lỗi",Toast.LENGTH_LONG).show();
@@ -60,8 +60,6 @@ public class DangKi extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-
-
                 // Toast.makeText(acti_2.this, tukhoas+"   "+dinhnghias, Toast.LENGTH_SHORT).show();
 //                if (tukhoa.isEmpty()||dinhnghia1.isEmpty()){
 //                    Toast.makeText(getApplicationContext(),"VUi LÒNG NHẬP ĐẦY ĐỦ THÔNG TIN",Toast.LENGTH_LONG).show();
