@@ -3,11 +3,8 @@ package com.example.demo11_11;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -15,9 +12,6 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ToggleButton;
 
 
 import com.example.demo11_11.danhsachphim.danhsachphim;
@@ -50,50 +44,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trangchu);
 
-        LinearLayoutManager layoutManager
-                = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
-        RecyclerView rv_phimdangchieu1 = (RecyclerView) findViewById(R.id.rv_phimdangchieu);
-        rv_phimdangchieu1.setLayoutManager(layoutManager);
-
-        // Khởi tạo OkHttpClient để lấy dữ liệu.
-        OkHttpClient client = new OkHttpClient();
-
-        // Khởi tạo Moshi adapter để biến đổi json sang model java (ở đây là User)
-        Moshi moshi = new Moshi.Builder().build();
-        Type usersType = Types.newParameterizedType(List.class, danhsachphim.class);
-        final JsonAdapter<List<danhsachphim>> jsonAdapter = moshi.adapter(usersType);
-
-        // Tạo request lên server.
-        Request request = new Request.Builder()
-                .url("http://192.168.88.105/api1/api.php")
-                .build();
-
-
-        // Thực thi request.
-        client.newCall(request).enqueue(new Callback() {
+        drawerLayout = findViewById(R.id.drawer_layout);
+        navigationView = findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onFailure(Call call, IOException e) {
-                Log.e("Error", "Network Error");
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-
-                // Lấy thông tin JSON trả về. Bạn có thể log lại biến json này để xem nó như thế nào.
-                String json = response.body().string();
-                final List<danhsachphim> users = jsonAdapter.fromJson(json);
-
-                // Cho hiển thị lên RecyclerView.
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        rv_phimdangchieu1.setAdapter(new danhsachphimAdapter(users, MainActivity.this));
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.danhsachphim:{
+                        startActivity(new Intent(MainActivity.this, danhsachphimMain.class));
+                        break;
                     }
-                });
+                    case R.id.thongtin:{
+                        startActivity(new Intent(MainActivity.this,thongtincanhan.class));
+                        break;
+                    }
+                    case R.id.trangchu:{
+                        startActivity(new Intent(MainActivity.this,MainActivity.class));
+                    }
+                }
+                drawerLayout.closeDrawers();
+                return true;
             }
         });
+        psc();
+        pdc();
 
-
+    }
+    public void psc()
+    {
+        //tách hàm ra
         LinearLayoutManager layoutManagers
                 = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         RecyclerView rv_phimsapchieu1  = (RecyclerView) findViewById(R.id.rv_phimsapchieu);
@@ -135,35 +114,48 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+    }
+    public void pdc() {
+        LinearLayoutManager layoutManager
+                = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        RecyclerView rv_phimdangchieu1 = (RecyclerView) findViewById(R.id.rv_phimdangchieu);
+        rv_phimdangchieu1.setLayoutManager(layoutManager);
+
+        // Khởi tạo OkHttpClient để lấy dữ liệu.
+        OkHttpClient client = new OkHttpClient();
+
+        // Khởi tạo Moshi adapter để biến đổi json sang model java (ở đây là User)
+        Moshi moshi = new Moshi.Builder().build();
+        Type usersType = Types.newParameterizedType(List.class, danhsachphim.class);
+        final JsonAdapter<List<danhsachphim>> jsonAdapter = moshi.adapter(usersType);
+
+        // Tạo request lên server.
+        Request request = new Request.Builder()
+                .url("http://192.168.88.105/api1/api.php")
+                .build();
 
 
-        drawerLayout = findViewById(R.id.drawer_layout);
-        navigationView = findViewById(R.id.nav_view);
-
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+        // Thực thi request.
+        client.newCall(request).enqueue(new Callback() {
             @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                switch (menuItem.getItemId()) {
-                    case R.id.trangchu: {
-                        intent = new Intent(MainActivity.this, MainActivity.class);
-                        break;
+            public void onFailure(Call call, IOException e) {
+                Log.e("Error", "Network Error");
+            }
+
+            @Override
+            public void onResponse(Call call, Response response) throws IOException {
+
+                // Lấy thông tin JSON trả về. Bạn có thể log lại biến json này để xem nó như thế nào.
+                String json = response.body().string();
+                final List<danhsachphim> users = jsonAdapter.fromJson(json);
+
+                // Cho hiển thị lên RecyclerView.
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        rv_phimdangchieu1.setAdapter(new danhsachphimAdapter(users, MainActivity.this));
                     }
-                    case R.id.thongtin: {
-                        intent = new Intent(MainActivity.this, thongtincanhan.class);
-                        break;
-                    }
-                    case R.id.giaodich: {
-                        intent = new Intent(MainActivity.this, lichsugiaodich.class);
-                        break;
-                    }
-                    case R.id.danhsachphim:{
-                        intent=new Intent(MainActivity.this, danhsachphimMain.class);
-                        break;
-                    }
-                }
-                startActivity(intent);
-                drawerLayout.closeDrawers();
-                return true;
+                });
             }
         });
     }

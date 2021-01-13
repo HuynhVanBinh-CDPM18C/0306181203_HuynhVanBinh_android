@@ -2,6 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
+            android:icon="@android:drawable/ic_lock_lock"
+            android:title="Đăng kí" />
+        <item
+            android:icon="@android:drawable/ic_lock_lock"
+            android:title="Đăng Nhập" />
+        <item
             android:id="@+id/trangchu"
             android:icon="@drawable/home"
             android:title="Trang Chủ" />
@@ -17,8 +23,5 @@
             android:id="@+id/giaodich"
             android:icon="@android:drawable/ic_menu_edit"
             android:title="Lịch Sử Giao Dịch" />
-        <item
-            android:icon="@android:drawable/ic_lock_lock"
-            android:title="Đăng Nhập" />
     </group>
 </menu>
