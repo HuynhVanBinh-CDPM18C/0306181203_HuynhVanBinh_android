@@ -35,6 +35,10 @@ import java.util.concurrent.ExecutionException;
 public class DangKi extends AppCompatActivity {
     private EditText tuvung;
     private EditText dinhnghia;
+    private EditText email;
+    private EditText matkhau;
+    private EditText ngaysinh;
+    private EditText gioitinh;
 
     EditText edtDate;
 
@@ -63,7 +67,11 @@ public class DangKi extends AppCompatActivity {
 
                 String tukhoa=tuvung.getText().toString().trim();
                 String dinhnghia1=dinhnghia.getText().toString().trim();
-                TuVung s = new TuVung(tukhoa,dinhnghia1);
+                String email1=email.getText().toString().trim();
+                String matkhau1=matkhau.getText().toString().trim();
+                String ngaysinh1=ngaysinh.getText().toString().trim();
+                String gioitinh1=gioitinh.getText().toString().trim();
+                TuVung s = new TuVung(tukhoa,dinhnghia1,email1,matkhau1,ngaysinh1,gioitinh1);
                 try {
                     String result=new APIInsert(getApplication()).execute(s).get();
                     if (result.equals("true")) {
@@ -77,12 +85,6 @@ public class DangKi extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                // Toast.makeText(acti_2.this, tukhoas+"   "+dinhnghias, Toast.LENGTH_SHORT).show();
-//                if (tukhoa.isEmpty()||dinhnghia1.isEmpty()){
-//                    Toast.makeText(getApplicationContext(),"VUi LÒNG NHẬP ĐẦY ĐỦ THÔNG TIN",Toast.LENGTH_LONG).show();
-//                }else {
-//                    themtumoi(url);
-//                }
             }
         });
     }
@@ -96,6 +98,10 @@ public class DangKi extends AppCompatActivity {
     {
         tuvung=findViewById(R.id.tukhoas);
         dinhnghia=findViewById(R.id.dinhnghias);
+        email=findViewById(R.id.emails);
+        matkhau=findViewById(R.id.matkhaus);
+        ngaysinh=findViewById(R.id.ngays);
+        gioitinh=findViewById(R.id.gioitinhs);
 
         btn=findViewById(R.id.them);
     }
@@ -107,7 +113,6 @@ public class DangKi extends AppCompatActivity {
             public void onResponse(String response) {
                 if (response.trim().equals("success"))
                 {
-
                     Toast.makeText(getApplicationContext(),"Thêm Thành Công",Toast.LENGTH_LONG).show();
 //                    Intent intent = new Intent(getApplicationContext(),MainActivity.class);
 //                    startActivity(intent);
@@ -132,6 +137,14 @@ public class DangKi extends AppCompatActivity {
                 params.put("tukhoa1",tuvung.getText().toString().trim());
 
                 params.put("dinhnghia1",dinhnghia.getText().toString().trim());
+
+                params.put("email1",email.getText().toString().trim());
+
+                params.put("matkhau1",matkhau.getText().toString().trim());
+
+                params.put("ngaysinh1",ngaysinh.getText().toString().trim());
+
+                params.put("gioitinh1",gioitinh.getText().toString().trim());
 
                 return params;
             }

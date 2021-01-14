@@ -57,7 +57,8 @@
                 android:layout_marginTop="4dp"
                 android:ems="10"
                 android:hint="Nhập số điện thoại"
-                android:inputType="textPersonName"
+                android:inputType="numberSigned|textPersonName|phone"
+                android:maxLength="12"
                 android:textSize="20sp" />
 
             <TextView
@@ -68,13 +69,12 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName5"
-                android:layout_width="409dp"
+                android:id="@+id/emails"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="Nhập email"
-                android:inputType="textPersonName"
-                android:textSize="20sp" />
+                android:hint="@gmail.com"
+                android:inputType="textEmailAddress" />
 
             <TextView
                 android:id="@+id/textView17"
@@ -84,12 +84,12 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/matkhaus"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="Nhập mật khẩu"
-                android:inputType="textPersonName"
+                android:inputType="textPersonName|textPassword"
                 android:textSize="20sp" />
 
             <TextView
@@ -109,7 +109,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Chọn ngày sinh"
-                    android:inputType="textPersonName"
+                    android:inputType="date|textPersonName"
                     android:onClick="chonngay"
                     android:textSize="20sp" />
 
@@ -129,7 +129,7 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName6"
+                android:id="@+id/gioitinhs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
