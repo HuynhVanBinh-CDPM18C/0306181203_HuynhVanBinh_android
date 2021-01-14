@@ -1,4 +1,4 @@
-package com.example.demo11_11.dangnhap;
+package com.example.demo11_11;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.widget.Toast;
 
+<<<<<<< HEAD:android1/app/src/main/java/com/example/demo11_11/dangnhap/dangnhap.java
 
 //facebook
 import com.example.demo11_11.MainActivity;
@@ -22,6 +23,9 @@ import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
 import org.json.JSONObject;
+=======
+public class DangKi extends AppCompatActivity {
+>>>>>>> a42e3f70e8a6792c7dbd55a5429bd4348ac5a9e5:android1/app/src/main/java/com/example/demo11_11/DangKi.java
 
 public class dangnhap extends AppCompatActivity {
     private static final String TAG = dangnhap.class.getSimpleName();
@@ -30,6 +34,7 @@ public class dangnhap extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+<<<<<<< HEAD:android1/app/src/main/java/com/example/demo11_11/dangnhap/dangnhap.java
         setContentView(R.layout.activity_dangnhap);
         FacebookSdk.sdkInitialize(this.getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
@@ -89,5 +94,8 @@ public class dangnhap extends AppCompatActivity {
             request.setParameters(parameters);
             request.executeAsync();
         }
+=======
+        setContentView(R.layout.activity_dang_ki);
+>>>>>>> a42e3f70e8a6792c7dbd55a5429bd4348ac5a9e5:android1/app/src/main/java/com/example/demo11_11/DangKi.java
     }
 }
