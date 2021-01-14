@@ -124,6 +124,20 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtNoiDung" />
 
+        <Button
+            android:id="@+id/xemvideo"
+            android:layout_width="119dp"
+            android:layout_height="88dp"
+            android:background="@android:drawable/ic_media_play"
+            android:onClick="xemvideo"
+            app:layout_constraintBottom_toBottomOf="@+id/ivAnhBia"
+            app:layout_constraintEnd_toEndOf="@+id/ivAnhBia"
+            app:layout_constraintHorizontal_bias="0.521"
+            app:layout_constraintStart_toStartOf="@+id/ivAnhBia"
+            app:layout_constraintTop_toTopOf="@+id/ivAnhBia"
+            app:layout_constraintVertical_bias="0.534"
+            tools:ignore="OnClick" />
+
     </android.support.constraint.ConstraintLayout>
 
 </LinearLayout>

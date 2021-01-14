@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9C9898"
+    tools:context=".video">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="416dp"
+        android:layout_height="355dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/idBatDau"
+        android:layout_width="101dp"
+        android:layout_height="99dp"
+        android:background="@android:drawable/ic_media_play"
+        android:backgroundTint="#FDFCFC"
+        android:onClick="an"
+        app:layout_constraintBottom_toBottomOf="@+id/videoView"
+        app:layout_constraintEnd_toEndOf="@+id/videoView"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/videoView"
+        app:layout_constraintTop_toTopOf="@+id/videoView"
+        app:layout_constraintVertical_bias="0.539"
+        tools:ignore="OnClick"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/idTroVe"
+        android:layout_width="101dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="4dp"
+        android:background="@android:drawable/ic_menu_revert"
+        android:onClick="tv"
+        app:layout_constraintBottom_toTopOf="@+id/videoView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.327"
+        tools:ignore="OnClick" />
+</android.support.constraint.ConstraintLayout>
