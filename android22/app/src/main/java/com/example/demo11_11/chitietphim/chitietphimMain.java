@@ -1,14 +1,18 @@
 package com.example.demo11_11.chitietphim;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.demo11_11.R;
+import com.example.demo11_11.danhsachphim.danhsachphimMain;
+import com.example.demo11_11.video;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import com.squareup.moshi.Types;
@@ -78,4 +82,8 @@ public class chitietphimMain extends AppCompatActivity {
         });
     }
 
+    public void xemvideo(View view) {
+        Intent intent = new Intent(chitietphimMain.this, video.class);
+        startActivity(intent);
+    }
 }
