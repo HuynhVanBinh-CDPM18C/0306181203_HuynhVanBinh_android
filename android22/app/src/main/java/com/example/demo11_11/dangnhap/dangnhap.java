@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 //facebook
 import com.example.demo11_11.MainActivity;
+import com.example.demo11_11.dangky.DangKi;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -44,7 +45,8 @@ public class dangnhap extends AppCompatActivity {
                 Log.d(TAG, "======Facebook login success======");
                 Log.d(TAG, "Facebook Access Token: " + loginResult.getAccessToken().getToken());
                 Toast.makeText(dangnhap.this, "Login Facebook success.", Toast.LENGTH_SHORT).show();
-
+                Intent intent=new Intent(dangnhap.this, MainActivity.class);
+                startActivity(intent);
                 getFbInfo();
             }
 
