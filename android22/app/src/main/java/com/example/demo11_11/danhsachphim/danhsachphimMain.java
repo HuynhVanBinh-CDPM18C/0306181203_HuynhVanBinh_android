@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.demo11_11.R;
-import com.example.demo11_11.chitietphimMain;
+import com.example.demo11_11.chitietphim.chitietphimMain;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import com.squareup.moshi.Types;

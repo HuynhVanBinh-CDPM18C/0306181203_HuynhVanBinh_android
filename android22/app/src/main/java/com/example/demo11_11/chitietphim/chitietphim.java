@@ -1,4 +1,4 @@
-package com.example.demo11_11;
+package com.example.demo11_11.chitietphim;
 
 public class chitietphim {
     public String hinhanh;

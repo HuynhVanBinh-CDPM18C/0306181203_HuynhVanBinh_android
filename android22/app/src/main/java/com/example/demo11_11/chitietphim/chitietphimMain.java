@@ -1,4 +1,4 @@
-package com.example.demo11_11;
+package com.example.demo11_11.chitietphim;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.util.Log;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.demo11_11.R;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import com.squareup.moshi.Types;
@@ -32,6 +33,9 @@ public class chitietphimMain extends AppCompatActivity {
         setContentView(R.layout.chitietphim);
 
 
+        chitietpdc();
+    }
+    public void chitietpdc() {
         final RecyclerView rvUsers = (RecyclerView) findViewById(R.id.rv_chitietphimdangchieu);
         rvUsers.setLayoutManager(new LinearLayoutManager(this));
 
@@ -73,4 +77,5 @@ public class chitietphimMain extends AppCompatActivity {
             }
         });
     }
+
 }

@@ -1,4 +1,4 @@
-package com.example.demo11_11;
+package com.example.demo11_11.chitietphim;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.demo11_11.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
