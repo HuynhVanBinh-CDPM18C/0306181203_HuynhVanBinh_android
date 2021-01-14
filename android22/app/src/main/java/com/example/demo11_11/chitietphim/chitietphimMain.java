@@ -54,7 +54,7 @@ public class chitietphimMain extends AppCompatActivity {
 
         // Tạo request lên server.
         Request request = new Request.Builder()
-                .url("http://192.168.1.150:8080/api1/chitietphim1.php")
+                .url("http://192.168.88.105/api1/chitietphim1.php")
                 .build();
 
 

@@ -1,9 +1,12 @@
 package com.example.demo11_11;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -23,6 +26,7 @@ public class datve extends AppCompatActivity implements View.OnClickListener  {
     int year,month,day;
     TextView txtNgayduocchon;
     Calendar cal;
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,6 +82,22 @@ public class datve extends AppCompatActivity implements View.OnClickListener  {
         btnA4.setOnClickListener(this);
         btnA5.setOnClickListener(this);
         btnA6.setOnClickListener(this);
+
+        btnA1.setOnTouchListener(new View.OnTouchListener() {
+
+            @Override
+            public boolean onTouch(View view, MotionEvent event) {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btnA1.setBackgroundColor(Color.RED);
+                } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btnA1.setBackgroundColor(Color.BLUE);
+                } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
+                    btnA1.setBackgroundColor(Color.WHITE);
+                }
+                return false;
+            }
+
+        });
 
         btnB1 = findViewById(R.id.btnB1);
         btnB2 = findViewById(R.id.btnB2);
