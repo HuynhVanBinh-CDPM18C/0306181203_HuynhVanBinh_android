@@ -36,7 +36,7 @@ public class danhsachphimMain extends AppCompatActivity {
         setContentView(R.layout.activity_danhsachphim);
 
 
-        /*LinearLayoutManager layoutManager
+        LinearLayoutManager layoutManager
                 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         RecyclerView myList = (RecyclerView) findViewById(R.id.rv_phimdangchieu);
         myList.setLayoutManager(layoutManager);
@@ -124,12 +124,12 @@ public class danhsachphimMain extends AppCompatActivity {
                     }
                 });
             }
-        });*/
+        });
     }
 
-    /*public void chitiet(View view) {
+    public void chitiet(View view) {
         Intent intent = new Intent(danhsachphimMain.this, chitietphim.class);
         startActivity(intent);
 
-    }*/
+    }
 }
