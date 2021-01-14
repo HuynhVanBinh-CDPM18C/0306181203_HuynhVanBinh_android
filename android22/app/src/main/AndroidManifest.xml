@@ -15,7 +15,7 @@
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
         <activity android:name=".dangnhap.dangnhap"></activity>
         <activity android:name=".dangky.DangKi" />
-        <activity android:name=".chitietphim" />
+        <activity android:name=".chitietphimMain" />
         <activity android:name=".danhsachphim.danhsachphimMain" />
         <activity android:name=".lichsugiaodich.lichsugiaodich" />
         <activity android:name=".thongtincaNhan.thongtincanhan" />

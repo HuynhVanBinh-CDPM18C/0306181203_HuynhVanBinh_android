@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".chitietphim">
+    tools:context=".chitietphimMain">
 
 
     <android.support.constraint.ConstraintLayout
@@ -88,18 +88,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ibHinh" />
 
-        <TextView
-            android:id="@+id/textView16"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="244dp"
-            android:text="DIỄN VIÊN"
-            android:textSize="18sp"
-            android:textStyle="bold|italic"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ibHinh" />
-
         <EditText
             android:id="@+id/txtNoiDung"
             android:layout_width="385dp"
@@ -112,13 +100,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
-    </android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="236dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="28dp"
+            android:text="Button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNoiDung" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="65dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></LinearLayout>
+    </android.support.constraint.ConstraintLayout>
 
 </LinearLayout>
