@@ -1,17 +1,16 @@
 package com.example.demo11_11.dangky;
 
 
-import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
-import android.app.VoiceInteractor;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
-import android.widget.TextView;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -23,16 +22,14 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.demo11_11.MainActivity;
 import com.example.demo11_11.R;
-import com.example.demo11_11.dangnhap.dangnhap;
 
-import java.lang.reflect.Method;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
 
-public class DangKi extends AppCompatActivity {
+public class DangKi extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     private EditText tuvung;
     private EditText dinhnghia;
     private EditText email;
@@ -48,6 +45,12 @@ public class DangKi extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ki);
+
+        Spinner aSpinner=findViewById(R.id.tinhs);
+        aSpinner.setOnItemSelectedListener(this);
+
+
+
         anhxa();
 
         edtDate=(EditText)findViewById(R.id.ngays);
@@ -102,7 +105,6 @@ public class DangKi extends AppCompatActivity {
         matkhau=findViewById(R.id.matkhaus);
         ngaysinh=findViewById(R.id.ngays);
         gioitinh=findViewById(R.id.gioitinhs);
-
         btn=findViewById(R.id.them);
     }
     public void themtumoi(String url)
@@ -170,6 +172,17 @@ public class DangKi extends AppCompatActivity {
     public void chonngay(View view) {
         edtDate=(EditText)findViewById(R.id.ngays);
         ChonNgay();
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        Toast.makeText(this, parent.getSelectedItem().toString(), Toast.LENGTH_SHORT).show();
+       
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }
 
