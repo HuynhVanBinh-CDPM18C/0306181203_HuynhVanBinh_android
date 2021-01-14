@@ -126,42 +126,49 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="A1" />
+                    android:background="@drawable/button_color"
+                    android:text="A1"
+                    android:textColor="#050505" />
 
                 <Button
                     android:id="@+id/btnA2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="A2" />
+                    android:text="A2"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnA3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="A3" />
+                    android:text="A3"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnA4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="A4" />
+                    android:text="A4"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnA5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="A5" />
+                    android:text="A5"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnA6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="A6" />
+                    android:text="A6"
+                    android:background="@drawable/button_color"/>
             </LinearLayout>
 
             <LinearLayout
@@ -175,42 +182,48 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="B1" />
+                    android:text="B1"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnB2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="B2" />
+                    android:text="B2"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnB3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="B3" />
+                    android:text="B3"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnB4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="B4" />
+                    android:text="B4"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnB5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="B5" />
+                    android:text="B5"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnB6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="B6" />
+                    android:text="B6"
+                    android:background="@drawable/button_color"/>
             </LinearLayout>
 
             <LinearLayout
@@ -224,51 +237,56 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="C1" />
+                    android:text="C1"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnC2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="C2" />
+                    android:text="C2"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnC3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="C3" />
+                    android:text="C3"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnC4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="C4" />
+                    android:text="C4"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnC5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="C5" />
+                    android:text="C5"
+                    android:background="@drawable/button_color"/>
 
                 <Button
                     android:id="@+id/btnC6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="C6" />
+                    android:text="C6"
+                    android:background="@drawable/button_color"/>
             </LinearLayout>
 
             <Button
                 android:id="@+id/btnDatVe"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Đặt vé"
-                android:textColor="#FFFFFF"
-                />
+                android:text="THANH TOÁN"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
