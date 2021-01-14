@@ -14,6 +14,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
+<<<<<<< HEAD
+=======
+import com.example.demo11_11.dangky.DangKi;
+>>>>>>> parent of 4831487... van binh 2h t.5
 import com.example.demo11_11.danhsachphim.danhsachphim;
 import com.example.demo11_11.danhsachphim.danhsachphimAdapter;
 import com.example.demo11_11.danhsachphim.danhsachphimMain;
@@ -54,8 +58,13 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(new Intent(MainActivity.this, danhsachphimMain.class));
                         break;
                     }
+<<<<<<< HEAD
                     case R.id.trangchu:{
                         startActivity(new Intent(MainActivity.this, MainActivity.class));
+=======
+                    case R.id.dangky:{
+                        startActivity(new Intent(MainActivity.this, DangKi.class));
+>>>>>>> parent of 4831487... van binh 2h t.5
                         break;
                     }
                 }
