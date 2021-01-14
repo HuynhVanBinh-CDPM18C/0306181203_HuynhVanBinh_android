@@ -1,11 +1,31 @@
 package com.example.demo11_11.danhsachphim;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.demo11_11.R;
+import com.example.demo11_11.chitietphimMain;
+import com.squareup.moshi.JsonAdapter;
+import com.squareup.moshi.Moshi;
+import com.squareup.moshi.Types;
+
+import java.io.IOException;
+import java.lang.reflect.Type;
+import java.util.List;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
 
 public class danhsachphimMain extends AppCompatActivity {
     private ImageButton imageButton;
@@ -17,7 +37,7 @@ public class danhsachphimMain extends AppCompatActivity {
         setContentView(R.layout.activity_danhsachphim);
 
 
-        /*LinearLayoutManager layoutManager
+        LinearLayoutManager layoutManager
                 = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         RecyclerView myList = (RecyclerView) findViewById(R.id.rv_phimdangchieu);
         myList.setLayoutManager(layoutManager);
@@ -105,12 +125,12 @@ public class danhsachphimMain extends AppCompatActivity {
                     }
                 });
             }
-        });*/
+        });
     }
 
-    /*public void chitiet(View view) {
-        Intent intent = new Intent(danhsachphimMain.this, chitietphim.class);
+    public void chitiet(View view) {
+        Intent intent = new Intent(danhsachphimMain.this, chitietphimMain.class);
         startActivity(intent);
 
-    }*/
+    }
 }
