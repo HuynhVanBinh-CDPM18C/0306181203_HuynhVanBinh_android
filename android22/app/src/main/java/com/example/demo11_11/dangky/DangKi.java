@@ -2,12 +2,14 @@ package com.example.demo11_11.dangky;
 
 
 import android.annotation.SuppressLint;
+import android.app.DatePickerDialog;
 import android.app.VoiceInteractor;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -24,6 +26,8 @@ import com.example.demo11_11.R;
 import com.example.demo11_11.dangnhap.dangnhap;
 
 import java.lang.reflect.Method;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ExecutionException;
@@ -32,14 +36,26 @@ public class DangKi extends AppCompatActivity {
     private EditText tuvung;
     private EditText dinhnghia;
 
+    EditText edtDate;
+
     // String url="http://192.168.43.6:8081/api3/insert.php";
     private Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ki);
-
         anhxa();
+
+        edtDate=(EditText)findViewById(R.id.ngays);
+
+        edtDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ChonNgay();
+            }
+        });
+
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -123,5 +139,24 @@ public class DangKi extends AppCompatActivity {
         requestQueue.add(stringRequest);
     }
 
-
+    private void ChonNgay(){
+        Calendar calendar=Calendar.getInstance();
+        int Ngays=calendar.get(Calendar.DATE);
+        int Thangs=calendar.get(Calendar.MONTH);
+        int Nams=calendar.get(Calendar.YEAR);
+        DatePickerDialog datePickerDialog=new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                calendar.set(year,month,dayOfMonth);
+                SimpleDateFormat simpleDateFormat=new SimpleDateFormat("dd/MM/yyyy");
+                edtDate.setText(simpleDateFormat.format(calendar.getTime()));
+            }
+        },Nams,Thangs,Ngays);
+        datePickerDialog.show();
+    }
+    public void chonngay(View view) {
+        edtDate=(EditText)findViewById(R.id.ngays);
+        ChonNgay();
+    }
 }
+
