@@ -22,6 +22,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.demo11_11.MainActivity;
 import com.example.demo11_11.R;
+import com.example.demo11_11.taikhoanvb;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -95,7 +96,7 @@ public class DangKi extends AppCompatActivity implements AdapterView.OnItemSelec
     }
 
     public void trove(View view) {
-        Intent intent=new Intent(DangKi.this, MainActivity.class);
+        Intent intent=new Intent(DangKi.this, taikhoanvb.class);
         startActivity(intent);
     }
 

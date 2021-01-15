@@ -25,6 +25,8 @@ import com.example.demo11_11.danhsachphim.danhsachphimAdapter;
 import com.example.demo11_11.danhsachphim.danhsachphimMain;
 import com.example.demo11_11.danhsachphim.phimsapchieu;
 import com.example.demo11_11.danhsachphim.phimsapchieuAdapter;
+import com.example.demo11_11.lichsugiaodich.lichsugiaodich;
+import com.example.demo11_11.thongtincaNhan.thongtincanhan;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import com.squareup.moshi.Types;
@@ -65,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
                     }
                     case R.id.dangnhap:{
                         startActivity(new Intent(MainActivity.this, dangnhap.class));
+                        break;
+                    }
+                    case R.id.thongtin:{
+                        startActivity(new Intent(MainActivity.this, lichsugiaodich.class));
                         break;
                     }
                 }

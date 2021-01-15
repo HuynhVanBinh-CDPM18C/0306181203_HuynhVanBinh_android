@@ -13,7 +13,7 @@ public class apithongtin {
         BufferedReader reader = null;
         String result = null;
         try {
-            URL requestURL = new URL("http://169.254.8.29/api3/thongtincanhan.php");
+            URL requestURL = new URL("http://192.168.1.26/api3/apiload.php");
             urlConnection = (HttpURLConnection) requestURL.openConnection();
             urlConnection.setRequestMethod("GET");
             urlConnection.connect();
