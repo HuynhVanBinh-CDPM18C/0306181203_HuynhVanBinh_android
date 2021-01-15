@@ -26,6 +26,7 @@ import com.example.demo11_11.danhsachphim.danhsachphimMain;
 import com.example.demo11_11.danhsachphim.phimsapchieu;
 import com.example.demo11_11.danhsachphim.phimsapchieuAdapter;
 import com.example.demo11_11.lichsugiaodich.lichsugiaodich;
+import com.example.demo11_11.lichsugiaodich.lichsugiaodichMain;
 import com.example.demo11_11.thongtincaNhan.thongtincanhan;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
@@ -74,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.giaodich:{
-                        startActivity(new Intent(MainActivity.this, lichsugiaodich.class));
+                        startActivity(new Intent(MainActivity.this, lichsugiaodichMain.class));
                         break;
                     }
                 }

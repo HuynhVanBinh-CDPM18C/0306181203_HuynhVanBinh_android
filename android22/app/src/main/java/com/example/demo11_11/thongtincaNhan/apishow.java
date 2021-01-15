@@ -14,13 +14,13 @@ public class apishow extends AsyncTask<String, String, String> {
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        Toast.makeText(m_con, "Start", Toast.LENGTH_SHORT).show();
+        Toast.makeText(m_con, "Thông tin cá nhân", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     protected void onPostExecute(String s) {
         super.onPostExecute(s);
-        Toast.makeText(m_con, "Finish"+s, Toast.LENGTH_SHORT).show();
+        Toast.makeText(m_con, "Finish", Toast.LENGTH_SHORT).show();
 
     }
 
