@@ -11,5 +11,5 @@ public String gio;
 public String rap;
 public String khuvuc;
 public String ghe;
-public int tongtien;
+public String tongtien;
 }

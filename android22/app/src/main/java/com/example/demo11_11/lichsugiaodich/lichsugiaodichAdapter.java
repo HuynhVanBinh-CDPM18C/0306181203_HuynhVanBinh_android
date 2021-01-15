@@ -35,7 +35,7 @@ public class lichsugiaodichAdapter extends RecyclerView.Adapter<lichsugiaodichAd
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.activity_lichsugiaodich, parent, false);
 
-        return new lichsugiaodichAdapter.UserItemViewHolder(itemView);
+        return new UserItemViewHolder(itemView);
     }
 
 
