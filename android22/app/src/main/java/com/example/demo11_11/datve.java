@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,7 +23,7 @@ import java.util.List;
 
 public class datve extends AppCompatActivity implements View.OnClickListener  {
     private Button btnA1,btnA2,btnA3,btnA4,btnA5,btnA6,btnB1,btnB2,btnB3,btnB4,btnB5,btnB6,btnC1,btnC2,btnC3,btnC4,btnC5,btnC6;
-    private Button chonngay;
+    ImageView chonngay;
     int year,month,day;
     TextView txtNgayduocchon;
     Calendar cal;
@@ -125,7 +126,7 @@ public class datve extends AppCompatActivity implements View.OnClickListener  {
         btnC5.setOnClickListener(this);
         btnC6.setOnClickListener(this);
 
-        chonngay = findViewById(R.id.btnChonNgay);
+        chonngay = findViewById(R.id.img_lich);
         txtNgayduocchon = findViewById(R.id.txtNgayduochon);
         cal = Calendar.getInstance();
         year = cal.get(Calendar.YEAR);
