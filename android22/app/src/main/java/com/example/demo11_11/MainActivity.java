@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.thongtin:{
-                        startActivity(new Intent(MainActivity.this, lichsugiaodich.class));
+                        startActivity(new Intent(MainActivity.this, thongtincanhan.class));
                         break;
                     }
                 }
