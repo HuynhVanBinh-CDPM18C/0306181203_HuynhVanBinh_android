@@ -282,6 +282,28 @@
                     android:background="@drawable/button_color"/>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtTong"
+                    android:layout_width="3dp"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:text="Tổng Tiền : "
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtTongTien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
             <Button
                 android:id="@+id/btnDatVe"
                 android:layout_width="match_parent"

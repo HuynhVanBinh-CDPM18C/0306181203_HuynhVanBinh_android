@@ -79,10 +79,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="60dp"
-            android:layout_marginTop="76dp"
+            android:layout_marginTop="28dp"
             android:text="TextView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.044"
             app:layout_constraintStart_toEndOf="@+id/txtDiem"
             app:layout_constraintTop_toBottomOf="@+id/ivAnhBia" />
 
@@ -115,10 +115,10 @@
             android:layout_height="58dp"
             android:layout_marginTop="28dp"
             android:background="#F44336"
+            android:onClick="datve"
             android:text="ĐẶT VÉ"
             android:textColor="#FFFFFF"
             android:textSize="30sp"
-            android:onClick="datve"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -138,6 +138,22 @@
             app:layout_constraintTop_toTopOf="@+id/ivAnhBia"
             app:layout_constraintVertical_bias="0.534"
             tools:ignore="OnClick" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="41dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginBottom="88dp"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toTopOf="@+id/txtNoiDung"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.019"
+            app:layout_constraintStart_toEndOf="@+id/txtDiem"
+            app:layout_constraintTop_toBottomOf="@+id/txtThoiLuong"
+            app:layout_constraintVertical_bias="1.0"
+            app:srcCompat="@drawable/file"
+            android:onClick="chamdiem"/>
 
     </android.support.constraint.ConstraintLayout>
 
