@@ -30,7 +30,9 @@ public class datve extends AppCompatActivity implements View.OnClickListener, Vi
     ImageView chonngay;
     int year, month, day;
     TextView txtNgayduocchon;
+    TextView TongTien = null;
     Calendar cal;
+
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -40,6 +42,7 @@ public class datve extends AppCompatActivity implements View.OnClickListener, Vi
         Spinner spnkhuvuc = (Spinner) findViewById(R.id.spnKhuVuc);
         Spinner spnRap = (Spinner) findViewById(R.id.spnRap);
         Spinner spnGio = (Spinner) findViewById(R.id.spnGio);
+        TongTien = findViewById(R.id.txtTongTien);
         //List Khu Vuc
         List<String> khuvuc = new ArrayList<String>();
         khuvuc.add("Hồ Chí Minh");
@@ -184,48 +187,167 @@ public class datve extends AppCompatActivity implements View.OnClickListener, Vi
     private void showDate(int year, int month, int day) {
         txtNgayduocchon.setText(new StringBuilder().append(day > 9 ? day : "0" + day).append("/").append(month > 9 ? month : "0" + month).append("/").append(year));
     }
-
     //OnClick ghe
+    int tongtien = 0;
+    int i = 0;
+    private void doClickCong(){
+        i = i+1;
+        tongtien += 60000;
+        TongTien.setText(Integer.toString(tongtien));
+    }
+
+    private void doClickTru(){
+        i = i-1;
+        tongtien -= 60000;
+        TongTien.setText(Integer.toString(tongtien));
+    }
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btnA1:
-                Toast.makeText(getApplicationContext(), "A1", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
                 break;
             case R.id.btnA2:
-                Toast.makeText(getApplicationContext(), "A2", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnA3:
-                Toast.makeText(getApplicationContext(), "A3", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnA4:
-                Toast.makeText(getApplicationContext(), "A4", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnA5:
-                Toast.makeText(getApplicationContext(), "A5", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnA6:
-                Toast.makeText(getApplicationContext(), "A6", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnB1:
-                Toast.makeText(getApplicationContext(), "B1", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnB2:
-                Toast.makeText(getApplicationContext(), "B2", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnB3:
-                Toast.makeText(getApplicationContext(), "B3", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnB4:
-                Toast.makeText(getApplicationContext(), "B4", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnB5:
-                Toast.makeText(getApplicationContext(), "A2", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnB6:
-                Toast.makeText(getApplicationContext(), "A3", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnC1:
-                Toast.makeText(getApplicationContext(), "A1", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnC2:
-                Toast.makeText(getApplicationContext(), "A2", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnC3:
-                Toast.makeText(getApplicationContext(), "A3", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnC4:
-                Toast.makeText(getApplicationContext(), "A1", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnC5:
-                Toast.makeText(getApplicationContext(), "A2", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
             case R.id.btnC6:
-                Toast.makeText(getApplicationContext(), "A3", Toast.LENGTH_LONG).show();
+                if(i==0)
+                    doClickCong();
+                else if (i==1)
+                    doClickTru();
+                else
+                    break;
+                break;
         }
     }
 
