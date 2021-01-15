@@ -25,12 +25,13 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
 
-public class datve extends AppCompatActivity implements View.OnClickListener  {
-    private Button btnA1,btnA2,btnA3,btnA4,btnA5,btnA6,btnB1,btnB2,btnB3,btnB4,btnB5,btnB6,btnC1,btnC2,btnC3,btnC4,btnC5,btnC6;
+public class datve extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener {
+    private Button btnA1, btnA2, btnA3, btnA4, btnA5, btnA6, btnB1, btnB2, btnB3, btnB4, btnB5, btnB6, btnC1, btnC2, btnC3, btnC4, btnC5, btnC6;
     ImageView chonngay;
-    int year,month,day;
+    int year, month, day;
     TextView txtNgayduocchon;
     Calendar cal;
+
     @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,9 +64,9 @@ public class datve extends AppCompatActivity implements View.OnClickListener  {
         suatchieu.add("23:00");
 
         // Creating adapter for spinner
-        ArrayAdapter<String> khuvucAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, khuvuc );
-        ArrayAdapter<String> rapAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, rap );
-        ArrayAdapter<String> suatAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, suatchieu );
+        ArrayAdapter<String> khuvucAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, khuvuc);
+        ArrayAdapter<String> rapAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, rap);
+        ArrayAdapter<String> suatAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, suatchieu);
         // Drop down layout style - list view with radio button
         khuvucAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         rapAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -88,26 +89,10 @@ public class datve extends AppCompatActivity implements View.OnClickListener  {
         btnA5.setOnClickListener(this);
         btnA6.setOnClickListener(this);
 
-        btnA1.setOnTouchListener(new View.OnTouchListener() {
-
-            @Override
-            public boolean onTouch(View view, MotionEvent event) {
-                if (event.getAction() == MotionEvent.ACTION_UP) {
-                    btnA1.setBackgroundColor(Color.RED);
-                } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
-                    btnA1.setBackgroundColor(Color.BLUE);
-                } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
-                    btnA1.setBackgroundColor(Color.WHITE);
-                }
-                return false;
-            }
-
-        });
-
         btnB1 = findViewById(R.id.btnB1);
         btnB2 = findViewById(R.id.btnB2);
         btnB3 = findViewById(R.id.btnB3);
-        btnB4= findViewById(R.id.btnB4);
+        btnB4 = findViewById(R.id.btnB4);
         btnB5 = findViewById(R.id.btnB5);
         btnB6 = findViewById(R.id.btnB6);
         btnB1.setOnClickListener(this);
@@ -120,7 +105,7 @@ public class datve extends AppCompatActivity implements View.OnClickListener  {
         btnC1 = findViewById(R.id.btnC1);
         btnC2 = findViewById(R.id.btnC2);
         btnC3 = findViewById(R.id.btnC3);
-        btnC4= findViewById(R.id.btnC4);
+        btnC4 = findViewById(R.id.btnC4);
         btnC5 = findViewById(R.id.btnC5);
         btnC6 = findViewById(R.id.btnC6);
         btnC1.setOnClickListener(this);
@@ -130,13 +115,32 @@ public class datve extends AppCompatActivity implements View.OnClickListener  {
         btnC5.setOnClickListener(this);
         btnC6.setOnClickListener(this);
 
+        btnA1.setOnTouchListener(this);
+        btnA2.setOnTouchListener(this);
+        btnA3.setOnTouchListener(this);
+        btnA4.setOnTouchListener(this);
+        btnA5.setOnTouchListener(this);
+        btnA6.setOnTouchListener(this);
+        btnB1.setOnTouchListener(this);
+        btnB2.setOnTouchListener(this);
+        btnB3.setOnTouchListener(this);
+        btnB4.setOnTouchListener(this);
+        btnB5.setOnTouchListener(this);
+        btnB6.setOnTouchListener(this);
+        btnC1.setOnTouchListener(this);
+        btnC2.setOnTouchListener(this);
+        btnC3.setOnTouchListener(this);
+        btnC4.setOnTouchListener(this);
+        btnC5.setOnTouchListener(this);
+        btnC6.setOnTouchListener(this);
+
         chonngay = findViewById(R.id.img_lich);
         txtNgayduocchon = findViewById(R.id.txtNgayduochon);
         cal = Calendar.getInstance();
         year = cal.get(Calendar.YEAR);
         month = cal.get(Calendar.MONTH);
         day = cal.get(Calendar.DAY_OF_MONTH);
-        showDate(year,month+1,day);
+        showDate(year, month + 1, day);
 
         //OnClick nut chon ngay
         chonngay.setOnClickListener(new View.OnClickListener() {
@@ -147,6 +151,7 @@ public class datve extends AppCompatActivity implements View.OnClickListener  {
             }
         });
     }
+
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         // On selecting a spinner item
         String item = parent.getItemAtPosition(position).toString();
@@ -154,55 +159,57 @@ public class datve extends AppCompatActivity implements View.OnClickListener  {
         // Showing selected spinner item
         Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
     }
+
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Auto-generated method stub
     }
+
     @Override
-    protected Dialog onCreateDialog(int id){
-        if (id==1){
-            return new DatePickerDialog(this , dateSetListener , year,month,day);
+    protected Dialog onCreateDialog(int id) {
+        if (id == 1) {
+            return new DatePickerDialog(this, dateSetListener, year, month, day);
         }
         return null;
     }
+
     DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
         @Override
         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
             txtNgayduocchon.setText("");
-            showDate(year,month+1,dayOfMonth);
+            showDate(year, month + 1, dayOfMonth);
         }
     };
 
     //hien ngay
-    private void showDate(int year,int month , int day)
-    {
-        txtNgayduocchon.setText(new StringBuilder().append(day>9 ? day : "0" + day).append("/").append(month > 9 ? month : "0" + month).append("/").append(year));
+    private void showDate(int year, int month, int day) {
+        txtNgayduocchon.setText(new StringBuilder().append(day > 9 ? day : "0" + day).append("/").append(month > 9 ? month : "0" + month).append("/").append(year));
     }
 
     //OnClick ghe
     @Override
     public void onClick(View view) {
-        switch (view.getId())
-        {
+        switch (view.getId()) {
             case R.id.btnA1:
                 Toast.makeText(getApplicationContext(), "A1", Toast.LENGTH_LONG).show();
+                break;
             case R.id.btnA2:
                 Toast.makeText(getApplicationContext(), "A2", Toast.LENGTH_LONG).show();
             case R.id.btnA3:
                 Toast.makeText(getApplicationContext(), "A3", Toast.LENGTH_LONG).show();
             case R.id.btnA4:
-                Toast.makeText(getApplicationContext(), "A1", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "A4", Toast.LENGTH_LONG).show();
             case R.id.btnA5:
-                Toast.makeText(getApplicationContext(), "A2", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "A5", Toast.LENGTH_LONG).show();
             case R.id.btnA6:
-                Toast.makeText(getApplicationContext(), "A3", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "A6", Toast.LENGTH_LONG).show();
             case R.id.btnB1:
-                Toast.makeText(getApplicationContext(), "A1", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "B1", Toast.LENGTH_LONG).show();
             case R.id.btnB2:
-                Toast.makeText(getApplicationContext(), "A2", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "B2", Toast.LENGTH_LONG).show();
             case R.id.btnB3:
-                Toast.makeText(getApplicationContext(), "A3", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "B3", Toast.LENGTH_LONG).show();
             case R.id.btnB4:
-                Toast.makeText(getApplicationContext(), "A1", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "B4", Toast.LENGTH_LONG).show();
             case R.id.btnB5:
                 Toast.makeText(getApplicationContext(), "A2", Toast.LENGTH_LONG).show();
             case R.id.btnB6:
@@ -223,7 +230,33 @@ public class datve extends AppCompatActivity implements View.OnClickListener  {
     }
 
     public void chuyentrang(View view) {
-        Intent intent = new Intent(datve.this , lichsugiaodich.class);
+        Intent intent = new Intent(datve.this, lichsugiaodich.class);
         startActivity(intent);
+    }
+
+    @Override
+    public boolean onTouch(View v, MotionEvent event) {
+        switch (v.getId()) {
+            case R.id.btnA1: {
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btnA1.setBackgroundColor(Color.RED);
+                } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btnA1.setBackgroundColor(Color.BLUE);
+                } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
+                    btnA1.setBackgroundColor(Color.WHITE);
+                }
+                return false;
+            }
+            case R.id.btnA2:
+                if (event.getAction() == MotionEvent.ACTION_UP) {
+                    btnA2.setBackgroundColor(Color.RED);
+                } else if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                    btnA2.setBackgroundColor(Color.BLUE);
+                } else if (event.getAction() == MotionEvent.ACTION_MOVE) {
+                    btnA2.setBackgroundColor(Color.WHITE);
+                }
+                return false;
+        }
+        return false;
     }
 }
