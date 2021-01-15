@@ -1,15 +1,16 @@
 package com.example.demo11_11.lichsugiaodich;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.demo11_11.R;
-import com.example.demo11_11.danhsachphim.danhsachphim;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -30,40 +31,50 @@ public class lichsugiaodichAdapter extends RecyclerView.Adapter<lichsugiaodichAd
     }
 
     @Override
-    public lichsugiaodichAdapter.UserItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public UserItemViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.danhsachphim_item, parent, false);
+                .inflate(R.layout.activity_lichsugiaodich, parent, false);
 
-        return new com.example.demo11_11.danhsachphim.danhsachphimAdapter.UserItemViewHolder(itemView);
+        return new lichsugiaodichAdapter.UserItemViewHolder(itemView);
     }
 
+
     @Override
-    public void onBindViewHolder(com.example.demo11_11.danhsachphim.danhsachphimAdapter.UserItemViewHolder holder, int position) {
-        danhsachphim u = users.get(position);
+    public void onBindViewHolder(@NonNull UserItemViewHolder holder, int position) {
+        lichsugiaodich u = users.get(position);
         Picasso.with(context)
                 .load(u.hinhanh)
                 .into(holder.hinhanh);
         holder.tenphim.setText(u.tenphim);
-        holder.theloai.setText(u.theloai);
-        holder.dotuoi.setText(u.dotuoi);
-        holder.sodiem.setText(u.sodiem);
+        holder.ngay.setText(u.ngay);
+        holder.gio.setText(u.gio);
+        holder.rap.setText(u.rap);
+        holder.khuvuc.setText(u.khuvuc);
+        holder.ghe.setText(u.ghe);
+        holder.tongtien.setText(u.tongtien);
     }
 
     public static class UserItemViewHolder extends RecyclerView.ViewHolder {
-        public ImageButton hinhanh;
+        public ImageView hinhanh;
         public TextView tenphim;
-        public TextView theloai;
-        public TextView dotuoi;
-        public TextView sodiem;
+        public TextView ngay;
+        public TextView gio;
+        public TextView rap;
+        public TextView khuvuc;
+        public TextView ghe;
+        public TextView tongtien;
 
 
         public UserItemViewHolder(View itemView) {
             super(itemView);
-            hinhanh = (ImageButton) itemView.findViewById(R.id.ibHinhAnh);
-            tenphim = (TextView) itemView.findViewById(R.id.tvTenPhim);
-            theloai = (TextView) itemView.findViewById(R.id.tvTheLoai);
-            dotuoi  = (TextView) itemView.findViewById(R.id.tvDoTuoi);
-            sodiem  = (TextView) itemView.findViewById(R.id.tvSoDiem);
+            hinhanh = (ImageView) itemView.findViewById(R.id.hinhAnhLichSu);
+            tenphim = (TextView) itemView.findViewById(R.id.txtTenPhimNe);
+            ngay = (TextView) itemView.findViewById(R.id.txtNgay);
+            gio  = (TextView) itemView.findViewById(R.id.txtGio);
+            rap  = (TextView) itemView.findViewById(R.id.txtRap);
+            khuvuc = (TextView) itemView.findViewById(R.id.txtKhuVuc);
+            ghe  = (TextView) itemView.findViewById(R.id.txtGhe);
+            tongtien  = (TextView) itemView.findViewById(R.id.txtTongTien);
         }
     }
 }
