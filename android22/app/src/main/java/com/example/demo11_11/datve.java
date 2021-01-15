@@ -3,6 +3,7 @@ package com.example.demo11_11;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +17,9 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.demo11_11.chitietphim.chitietphimMain;
+import com.example.demo11_11.lichsugiaodich.lichsugiaodich;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -216,5 +220,10 @@ public class datve extends AppCompatActivity implements View.OnClickListener  {
             case R.id.btnC6:
                 Toast.makeText(getApplicationContext(), "A3", Toast.LENGTH_LONG).show();
         }
+    }
+
+    public void chuyentrang(View view) {
+        Intent intent = new Intent(datve.this , lichsugiaodich.class);
+        startActivity(intent);
     }
 }
