@@ -4,12 +4,16 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 
 //facebook
 import com.example.demo11_11.MainActivity;
 import com.example.demo11_11.dangky.DangKi;
+import com.example.demo11_11.taikhoanvb;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -25,6 +29,11 @@ import com.facebook.login.widget.LoginButton;
 import org.json.JSONObject;
 
 public class dangnhap extends AppCompatActivity {
+
+    EditText edtuser,edtpassword;
+    Button btndangnhap;
+
+
     private static final String TAG = dangnhap.class.getSimpleName();
     CallbackManager callbackManager;
     LoginButton fbLoginButton;
@@ -32,6 +41,7 @@ public class dangnhap extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dangnhap);
+        Anhxa();
         FacebookSdk.sdkInitialize(this.getApplicationContext());
         callbackManager = CallbackManager.Factory.create();
 
@@ -64,6 +74,12 @@ public class dangnhap extends AppCompatActivity {
         });
     }
 
+    private void Anhxa() {
+        edtuser=findViewById(R.id.edittextuser);
+        edtpassword=findViewById(R.id.edittextpassword);
+        btndangnhap=findViewById(R.id.btndangnhap);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -90,6 +106,24 @@ public class dangnhap extends AppCompatActivity {
             parameters.putString("fields", "id,name,link");
             request.setParameters(parameters);
             request.executeAsync();
+        }
+    }
+
+    public void dangnhaps(View view) {
+        if(edtuser.getText().length()!=0 && edtpassword.getText().length()!=0)
+        {
+            if(edtuser.getText().toString().equals("binh")&&edtpassword.getText().toString().equals("binh")){
+                Toast.makeText(dangnhap.this,"Đăng nhập thành công",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(dangnhap.this, MainActivity.class);
+                startActivity(intent);
+            }
+            else
+            {
+                Toast.makeText(dangnhap.this,"Đăng nhập Thất Bại",Toast.LENGTH_SHORT).show();
+            }
+        }else
+        {
+            Toast.makeText(dangnhap.this,"Nội dung không được để trống",Toast.LENGTH_SHORT).show();
         }
     }
 }

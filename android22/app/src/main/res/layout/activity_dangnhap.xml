@@ -6,63 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".dangnhap.dangnhap">
 
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="ĐĂNG NHẬP"
-        android:textColor="#FA0404"
-        android:textSize="40sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:ems="10"
-        android:hint="Nhập tài khoản"
-        android:inputType="textPersonName"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
 
-    <EditText
-        android:id="@+id/editTextTextPassword"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:ems="10"
-        android:hint="Nhập mật khẩu"
-        android:inputType="textPassword"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:background="#1576C0"
-        android:fontFamily="sans-serif-black"
-        android:text="ĐĂNG NHẬP"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
 
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/login_button"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button5" />
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="ĐĂNG NHẬP"
+                android:textColor="#FA0404"
+                android:textSize="40sp" />
+
+            <EditText
+                android:id="@+id/edittextuser"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="88dp"
+                android:ems="10"
+                android:hint="Nhập tài khoản"
+                android:inputType="textPersonName"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edittextpassword"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:ems="10"
+                android:hint="Nhập mật khẩu"
+                android:inputType="textPassword"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btndangnhap"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginTop="36dp"
+                android:background="#1576C0"
+                android:fontFamily="sans-serif-black"
+                android:onClick="dangnhaps"
+                android:text="ĐĂNG NHẬP"
+                android:textSize="30sp" />
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/login_button"
+                android:layout_width="411dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp" />
+        </LinearLayout>
+    </ScrollView>
+
 </android.support.constraint.ConstraintLayout>
