@@ -18,4 +18,11 @@
         <item>Nữ</item>
         <item>Khác</item>
     </string-array>
+
+    <string-array name="Spinner_items">
+        <item>Quận Tân Bình</item>
+        <item>Quận 4</item>
+        <item>Huyện Cái Bè</item>
+        <item>Huyện Cai Lậy</item>
+    </string-array>
 </resources>

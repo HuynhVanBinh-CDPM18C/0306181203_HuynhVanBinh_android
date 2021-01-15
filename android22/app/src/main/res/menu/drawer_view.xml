@@ -4,11 +4,11 @@
         <item
             android:id="@+id/dangky"
             android:icon="@android:drawable/ic_lock_lock"
-            android:title="Đăng kí" />
+            android:title="Tài Khoản" />
         <item
             android:id="@+id/dangnhap"
             android:icon="@android:drawable/ic_lock_lock"
-            android:title="Đăng Nhập" />
+            android:title="VAN VAN" />
         <item
             android:id="@+id/trangchu"
             android:icon="@drawable/home"

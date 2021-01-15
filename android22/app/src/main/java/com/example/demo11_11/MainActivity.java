@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.dangky:{
-                        startActivity(new Intent(MainActivity.this, DangKi.class));
+                        startActivity(new Intent(MainActivity.this, taikhoanvb.class));
                         break;
                     }
                     case R.id.dangnhap:{

@@ -35,7 +35,7 @@ public class DangKi extends AppCompatActivity implements AdapterView.OnItemSelec
     private EditText email;
     private EditText matkhau;
     private EditText ngaysinh;
-    private EditText gioitinh;
+    private Spinner gioitinh;
 
     EditText edtDate;
 
@@ -45,8 +45,8 @@ public class DangKi extends AppCompatActivity implements AdapterView.OnItemSelec
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dang_ki);
-
         Spinner aSpinner=findViewById(R.id.tinhs);
+
         aSpinner.setOnItemSelectedListener(this);
 
 
@@ -73,7 +73,9 @@ public class DangKi extends AppCompatActivity implements AdapterView.OnItemSelec
                 String email1=email.getText().toString().trim();
                 String matkhau1=matkhau.getText().toString().trim();
                 String ngaysinh1=ngaysinh.getText().toString().trim();
-                String gioitinh1=gioitinh.getText().toString().trim();
+                String gioitinh1=gioitinh.getSelectedItem().toString().trim();
+
+
                 TuVung s = new TuVung(tukhoa,dinhnghia1,email1,matkhau1,ngaysinh1,gioitinh1);
                 try {
                     String result=new APIInsert(getApplication()).execute(s).get();
@@ -104,7 +106,8 @@ public class DangKi extends AppCompatActivity implements AdapterView.OnItemSelec
         email=findViewById(R.id.emails);
         matkhau=findViewById(R.id.matkhaus);
         ngaysinh=findViewById(R.id.ngays);
-        gioitinh=findViewById(R.id.gioitinhs);
+        gioitinh=findViewById(R.id.tinhs);
+
         btn=findViewById(R.id.them);
     }
     public void themtumoi(String url)
@@ -146,7 +149,9 @@ public class DangKi extends AppCompatActivity implements AdapterView.OnItemSelec
 
                 params.put("ngaysinh1",ngaysinh.getText().toString().trim());
 
-                params.put("gioitinh1",gioitinh.getText().toString().trim());
+                params.put("gioitinh1",gioitinh.getSelectedItem().toString().trim());
+
+
 
                 return params;
             }

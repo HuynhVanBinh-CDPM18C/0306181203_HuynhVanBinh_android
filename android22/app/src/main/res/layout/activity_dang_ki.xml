@@ -114,10 +114,10 @@ android:orientation="vertical"
 
                 <EditText
                     android:id="@+id/ngays"
-                    android:enabled="false"
-                    android:layout_width="267dp"
+                    android:layout_width="350dp"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:enabled="false"
                     android:hint="Chọn ngày sinh"
                     android:inputType="date|textPersonName"
                     android:onClick="chonngay"
@@ -144,21 +144,16 @@ android:orientation="vertical"
 
                 <Spinner
                     android:id="@+id/tinhs"
-                    android:layout_width="200dp"
+                    android:layout_width="307dp"
                     android:layout_height="40dp"
-
                     android:entries="@array/Spinner_item"></Spinner>
 
             </TableRow>
 
-            <EditText
-                android:id="@+id/gioitinhs"
+            <TextView
+                android:id="@+id/textView21"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:hint="XX"
-                android:inputType="textPersonName"
-                android:textSize="20sp" />
+                android:layout_height="wrap_content" />
 
             <Button
                 android:id="@+id/them"

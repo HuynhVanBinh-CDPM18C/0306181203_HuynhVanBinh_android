@@ -10,6 +10,7 @@ public class TuVung {
     private String NgaySinh;
     private String GioiTinh;
 
+
     public String getTuVung() {
         return TuVung;
     }
@@ -35,6 +36,8 @@ public class TuVung {
     }
 
 
+
+
     public void setTuVung(String tuVung) {
         this.TuVung = tuVung;
     }
@@ -56,7 +59,11 @@ public class TuVung {
     public void setGioiTinh(String gioiTinh) {
         this.GioiTinh = gioiTinh;
     }
-    public TuVung(String TuVung,String DinhNghia,String EmAil,String MatKhau,String NgaySinh,String GioiTinh)
+
+
+
+    public TuVung(String TuVung,String DinhNghia,String EmAil,
+                  String MatKhau,String NgaySinh,String GioiTinh)
     {
         this.TuVung=TuVung;
         this.DinhNghia=DinhNghia;
@@ -64,6 +71,8 @@ public class TuVung {
         this.MatKhau=MatKhau;
         this.NgaySinh=NgaySinh;
         this.GioiTinh=GioiTinh;
+
+
     }
 
     public TuVung() {
@@ -73,13 +82,13 @@ public class TuVung {
         this.MatKhau = "";
         this.NgaySinh = "";
         this.GioiTinh = "";
+
+
     }
 
     @NonNull
     @Override    public String toString() {
-        return this.TuVung+ " "+ this.DinhNghia+ " "+ this.EmAil+ " "+ this.MatKhau+ " "+ this.NgaySinh+ " "+ this.GioiTinh;
+        return this.TuVung+ " "+ this.DinhNghia+ " "+ this.EmAil+ " "+ this.MatKhau+ " "+
+                this.NgaySinh+ " "+ this.GioiTinh;
     }
-
-
-
 }
