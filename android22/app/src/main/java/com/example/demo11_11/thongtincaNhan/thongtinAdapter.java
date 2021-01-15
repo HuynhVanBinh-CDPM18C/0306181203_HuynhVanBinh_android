@@ -42,7 +42,7 @@ public class thongtinAdapter extends RecyclerView.Adapter<thongtinAdapter.WordVi
         holder.sodienthoai.setText(word.getSodienthoai());
         holder.email.setText(word.getEmail());
         holder.matkhau.setText(word.getMatkhau());
-        holder.diachi.setText(word.getDiachi());
+
     }
 
 
@@ -56,7 +56,7 @@ public class thongtinAdapter extends RecyclerView.Adapter<thongtinAdapter.WordVi
 
     public class WordViewHolder extends RecyclerView.ViewHolder {
         thongtinAdapter adapter;
-        TextView tvTu, tvDinhNghia, txtngaysinh,sodienthoai,email,matkhau,diachi;
+        TextView tvTu, tvDinhNghia, txtngaysinh,sodienthoai,email,matkhau;
         public WordViewHolder(@NonNull View itemView, thongtinAdapter wordListAdapter) {
             super(itemView);
 
@@ -66,7 +66,7 @@ public class thongtinAdapter extends RecyclerView.Adapter<thongtinAdapter.WordVi
             sodienthoai=itemView.findViewById(R.id.sodienthoai);
             email=itemView.findViewById(R.id.email);
             matkhau=itemView.findViewById(R.id.matkhau);
-            diachi=itemView.findViewById(R.id.diachi);
+
             adapter= wordListAdapter;
         }
     }

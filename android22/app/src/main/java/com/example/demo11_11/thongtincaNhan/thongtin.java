@@ -9,7 +9,7 @@ public class thongtin {
     private String sodienthoai;
     private String email;
     private String matkhau;
-    private String diachi;
+
 
     public String getHoten() {
         return hoten;
@@ -25,7 +25,7 @@ public class thongtin {
 
     public String getMatkhau(){ return matkhau;}
 
-    public String getDiachi(){ return diachi;}
+
 
 
     public void setHoten(String hoTen) {
@@ -52,11 +52,8 @@ public class thongtin {
         this.matkhau = matkhau1;
     }
 
-    public void setDiachi(String diachi1) {
-        this.diachi = diachi1;
-    }
 
-    public thongtin(String hoten,String noidung1, String ngaysinh, String sodienthoai, String email, String matkhau,String diachi)
+    public thongtin(String hoten,String noidung1, String ngaysinh, String sodienthoai, String email, String matkhau)
     {
         this.hoten=hoten;
         this.noidung1=noidung1;
@@ -64,7 +61,7 @@ public class thongtin {
         this.sodienthoai=sodienthoai;
         this.email=email;
         this.matkhau=matkhau;
-        this.diachi=diachi;
+
     }
 
     public thongtin() {
@@ -74,11 +71,11 @@ public class thongtin {
         this.sodienthoai="";
         this.email="";
         this.matkhau="";
-        this.diachi="";
+
     }
 
     @NonNull
     @Override    public String toString() {
-        return this.hoten+ " "+ this.noidung1 +" "+this.ngaysinh+" "+this.sodienthoai+ " "+this.email+" "+this.matkhau+" "+this.diachi;
+        return this.hoten+ " "+ this.noidung1 +" "+this.ngaysinh+" "+this.sodienthoai+ " "+this.email+" "+this.matkhau;
     }
 }

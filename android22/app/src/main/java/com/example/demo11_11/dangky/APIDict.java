@@ -14,7 +14,7 @@ public class APIDict {
         BufferedReader reader = null;
         String result = null;
         try {
-            URL requestURL = new URL("http://192.168.1.26/api3/insert.php?TuVung="+s.getTuVung()+"&DinhNghia="+s.getDinhNghia()
+            URL requestURL = new URL("http://192.168.1.26/api1/insertbinh.php?TuVung="+s.getTuVung()+"&DinhNghia="+s.getDinhNghia()
                     +"&EmAil="+s.getEmAil()+"&MatKhau="+s.getMatKhau()+"&NgaySinh="+s.getNgaySinh()+"&GioiTinh="+s.getGioiTinh());
             urlConnection = (HttpURLConnection) requestURL.openConnection();
             urlConnection.setRequestMethod("GET");

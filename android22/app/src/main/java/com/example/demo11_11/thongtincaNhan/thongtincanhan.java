@@ -69,13 +69,13 @@ public class thongtincanhan extends AppCompatActivity {
                 JSONObject jsonObject= jsonArray.getJSONObject(i);
                 thongtin tuVung= new thongtin();
 
-                tuVung.setHoten(jsonObject.getString("taikhoan"));
-                tuVung.setNoidung1(jsonObject.getString("hoten"));
-                tuVung.setNgaysinh(jsonObject.getString("ngaysinh"));
-                tuVung.setSodienthoai(jsonObject.getString("sodienthoai"));
-                tuVung.setEmail(jsonObject.getString("email"));
+                tuVung.setHoten(jsonObject.getString("hoten"));
+                tuVung.setNoidung1(jsonObject.getString("sodienthoai"));
+                tuVung.setNgaysinh(jsonObject.getString("email"));
+                tuVung.setSodienthoai(jsonObject.getString("ngaysinh"));
+                tuVung.setEmail(jsonObject.getString("gioitinh"));
                 tuVung.setMatkhau(jsonObject.getString("matkhau"));
-                tuVung.setDiachi(jsonObject.getString("diachi"));
+
                 lst_word.add(tuVung);
             }
             return  true;
