@@ -18,8 +18,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.demo11_11.chitietphim.chitietphimMain;
-import com.example.demo11_11.lichsugiaodich.lichsugiaodich;
+import com.example.demo11_11.lichsugiaodich.lichsugiaodichMain;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -352,7 +351,7 @@ public class datve extends AppCompatActivity implements View.OnClickListener, Vi
     }
 
     public void chuyentrang(View view) {
-        Intent intent = new Intent(datve.this, lichsugiaodich.class);
+        Intent intent = new Intent(datve.this, lichsugiaodichMain.class);
         startActivity(intent);
     }
 
