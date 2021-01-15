@@ -25,7 +25,7 @@
         <activity android:name=".dangky.DangKi" />
         <activity android:name=".chitietphim.chitietphimMain" />
         <activity android:name=".danhsachphim.danhsachphimMain" />
-        <activity android:name=".lichsugiaodich.lichsugiaodich" />
+        <activity android:name=".lichsugiaodich.lichsugiaodichMain" />
         <activity android:name=".thongtincaNhan.thongtincanhan" />
         <activity android:name=".MainActivity">
             <intent-filter>
