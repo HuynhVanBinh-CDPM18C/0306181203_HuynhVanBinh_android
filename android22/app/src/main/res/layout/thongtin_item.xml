@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
+        android:foregroundTint="#FFFFFF"
         android:text="Họ tên"
         android:textSize="22sp" />
 
