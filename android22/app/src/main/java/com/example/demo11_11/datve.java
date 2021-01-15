@@ -191,13 +191,13 @@ public class datve extends AppCompatActivity implements View.OnClickListener, Vi
     int tongtien = 0;
     int i = 0;
     private void doClickCong(){
-        i = i+1;
+        i = i + 1;
         tongtien += 60000;
         TongTien.setText(Integer.toString(tongtien));
     }
 
     private void doClickTru(){
-        i = i-1;
+        i = i - 1;
         tongtien -= 60000;
         TongTien.setText(Integer.toString(tongtien));
     }
