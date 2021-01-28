@@ -72,7 +72,7 @@
     <TextView
         android:id="@+id/ngaysinh"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="38dp"
         android:textSize="22sp" />
 
     <TextView
@@ -120,6 +120,48 @@
         android:id="@+id/textView10"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="TP/Tỉnh"
+        android:textSize="22sp" />
+
+    <Spinner
+        android:id="@+id/tinhs2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:entries="@array/Spinner_item11"></Spinner>
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Huyện/Quận"
+        android:textSize="22sp" />
+
+    <Spinner
+        android:id="@+id/tinhs3"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:entries="@array/Spinner_item12"></Spinner>
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Xã/Phường"
+        android:textSize="22sp" />
+
+    <Spinner
+        android:id="@+id/tinhs4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:entries="@array/Spinner_item13"></Spinner>
 
     <Button
         android:id="@+id/button"

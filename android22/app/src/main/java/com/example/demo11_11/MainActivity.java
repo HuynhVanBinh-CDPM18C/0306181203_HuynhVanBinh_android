@@ -28,6 +28,7 @@ import com.example.demo11_11.danhsachphim.phimsapchieuAdapter;
 import com.example.demo11_11.lichsugiaodich.lichsugiaodich;
 import com.example.demo11_11.lichsugiaodich.lichsugiaodichMain;
 import com.example.demo11_11.thongtincaNhan.thongtincanhan;
+import com.example.demo11_11.thongtingiaodich1.giaodich11;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
 import com.squareup.moshi.Types;
@@ -75,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     }
                     case R.id.giaodich:{
-                        startActivity(new Intent(MainActivity.this, lichsugiaodichMain.class));
+                        startActivity(new Intent(MainActivity.this, giaodich11.class));
                         break;
                     }
                 }
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Tạo request lên server.
         Request sapchieu = new Request.Builder()
-                .url("http://192.168.1.26/api1/apiphimsapchieu.php")
+                .url("http://192.168.1.26/api1/apiphimsapchieu11.php")
                 .build();
 
         // Khởi tạo OkHttpClient để lấy dữ liệu.
@@ -148,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Tạo request lên server.
         Request request = new Request.Builder()
-                .url("http://192.168.1.26/api1/api.php")
+                .url("http://192.168.1.26/api1/api11.php")
                 .build();
 
 

@@ -19,6 +19,33 @@
         <item>Khác</item>
     </string-array>
 
+    <string-array name="Spinner_item11">
+        <item>TP HCM</item>
+        <item>TP HN</item>
+        <item>Tien Giang</item>
+        <item>Loan An</item>
+        <item>Kien Giang</item>
+        <item>My Tho</item>
+    </string-array>
+
+    <string-array name="Spinner_item12">
+        <item>Quận 4</item>
+        <item>Quận 5</item>
+        <item>Cai Lậy</item>
+        <item>Châu Thành</item>
+        <item>Quận 7</item>
+        <item>Quận 12</item>
+    </string-array>
+
+    <string-array name="Spinner_item13">
+        <item>Phường 2</item>
+        <item>Phường 3</item>
+        <item>Phường 7</item>
+        <item>Phú Cường</item>
+        <item>Mỹ Thành Nam</item>
+        <item>Phường 1</item>
+    </string-array>
+
     <string-array name="Spinner_items">
         <item>Quận Tân Bình</item>
         <item>Quận 4</item>

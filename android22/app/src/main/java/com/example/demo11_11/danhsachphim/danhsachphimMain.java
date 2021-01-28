@@ -52,7 +52,7 @@ public class danhsachphimMain extends AppCompatActivity {
 
         // Tạo request lên server.
         Request request = new Request.Builder()
-                .url("http://192.168.88.105/api1/api.php")
+                .url("http://192.168.1.26/api1/api.php")
                 .build();
 
 
@@ -92,7 +92,7 @@ public class danhsachphimMain extends AppCompatActivity {
 
         // Tạo request lên server.
         Request sapchieu = new Request.Builder()
-                .url("http://192.168.88.105/api1/apiphimsapchieu.php")
+                .url("http://192.168.1.26/api1/apiphimsapchieu.php")
                 .build();
 
         // Khởi tạo OkHttpClient để lấy dữ liệu.

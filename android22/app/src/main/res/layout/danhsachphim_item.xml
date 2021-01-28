@@ -7,7 +7,7 @@
 
     <ImageButton
         android:id="@+id/ibHinhAnh"
-        android:layout_width="106dp"
+        android:layout_width="118dp"
         android:layout_height="130dp"
         android:background="#050505"
         android:onClick="chitiet"

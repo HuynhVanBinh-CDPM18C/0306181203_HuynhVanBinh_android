@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".dangnhap.dangnhap">
 
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/dangtaikhoan" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
