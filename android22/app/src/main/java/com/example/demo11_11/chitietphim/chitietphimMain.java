@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.demo11_11.R;
+import com.example.demo11_11.binhluan;
 import com.example.demo11_11.chamdiem;
 import com.example.demo11_11.danhsachphim.danhsachphimMain;
 import com.example.demo11_11.datve;
@@ -98,6 +99,11 @@ public class chitietphimMain extends AppCompatActivity {
 
     public void lichchieu(View view) {
         Intent intent = new Intent(chitietphimMain.this , lichchieu.class);
+        startActivity(intent);
+    }
+
+    public void binhluan(View view) {
+        Intent intent = new Intent(chitietphimMain.this , binhluan.class);
         startActivity(intent);
     }
 }

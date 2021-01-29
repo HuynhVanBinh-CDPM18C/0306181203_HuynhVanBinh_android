@@ -45,11 +45,12 @@
                 <RatingBar
                     android:id="@+id/ratingBar"
                     style="@style/Widget.AppCompat.RatingBar"
-                    android:layout_width="416dp"
-                    android:layout_height="54dp"
+                    android:layout_width="0dp"
+                    android:layout_height="53dp"
                     android:layout_marginTop="16dp"
                     android:numStars="10"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.761"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
             </android.support.constraint.ConstraintLayout>

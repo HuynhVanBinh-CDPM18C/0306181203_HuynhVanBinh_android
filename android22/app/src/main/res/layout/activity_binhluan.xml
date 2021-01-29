@@ -8,21 +8,66 @@
     app:layoutDescription="@xml/activity_binhluan_scene"
     tools:context=".binhluan">
 
-    <TextView
-        android:id="@+id/textView34"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Phim rất hay" />
+        android:layout_height="624dp">
 
-    <TextView
-        android:id="@+id/textView35"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="phim còn nhiều thiếu sót" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView36"
+            <TextView
+                android:id="@+id/textView34"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Phim rất hay"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView35"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="phim còn nhiều thiếu sót"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView36"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Bị cắt quá nhiều"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtXuat"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Bị cắt quá nhiều" />
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edtNhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnGui"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#CD0C0C"
+            android:text="Gửi"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:onClick="gui"/>
+    </LinearLayout>
+
 </LinearLayout>

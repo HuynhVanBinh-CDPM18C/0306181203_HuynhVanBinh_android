@@ -165,6 +165,7 @@
             android:text="Bình Luận"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
+            android:onClick="binhluan"
             app:layout_constraintBottom_toTopOf="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
