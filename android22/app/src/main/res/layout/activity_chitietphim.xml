@@ -90,8 +90,8 @@
             android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="60dp"
             android:text="NỘI DUNG"
             android:textSize="18sp"
             android:textStyle="bold|italic"
@@ -102,28 +102,30 @@
             android:id="@+id/txtNoiDung"
             android:layout_width="385dp"
             android:layout_height="155dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="44dp"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.615"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
 
         <Button
-            android:layout_width="227dp"
-            android:layout_height="58dp"
-            android:layout_marginTop="28dp"
+            android:id="@+id/btnLichChieu"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
             android:background="#F44336"
-            android:onClick="datve"
-            android:text="ĐẶT VÉ"
+            android:onClick="lichchieu"
+            android:text="Lịch chiếu"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView15"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtNoiDung" />
+            app:layout_constraintTop_toBottomOf="@+id/ibHinh"
+            app:layout_constraintVertical_bias="1.0"
+            />
 
         <Button
             android:id="@+id/xemvideo"
@@ -145,15 +147,30 @@
             android:layout_height="42dp"
             android:layout_marginStart="44dp"
             android:layout_marginBottom="88dp"
+            android:onClick="chamdiem"
             android:scaleType="centerInside"
             app:layout_constraintBottom_toTopOf="@+id/txtNoiDung"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.019"
             app:layout_constraintStart_toEndOf="@+id/txtDiem"
             app:layout_constraintTop_toBottomOf="@+id/txtThoiLuong"
-            app:layout_constraintVertical_bias="1.0"
-            app:srcCompat="@drawable/file"
-            android:onClick="chamdiem"/>
+            app:layout_constraintVertical_bias="0.341"
+            app:srcCompat="@drawable/file" />
+
+        <Button
+            android:id="@+id/btnXemBinhLuan"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:background="#F44336"
+            android:text="Bình Luận"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/textView15"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toEndOf="@+id/btnLichChieu"
+            app:layout_constraintTop_toBottomOf="@+id/ibHinh"
+            app:layout_constraintVertical_bias="1.0" />
 
     </android.support.constraint.ConstraintLayout>
 

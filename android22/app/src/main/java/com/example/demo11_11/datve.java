@@ -26,11 +26,8 @@ import java.util.List;
 
 public class datve extends AppCompatActivity implements View.OnClickListener, View.OnTouchListener {
     private Button btnA1, btnA2, btnA3, btnA4, btnA5, btnA6, btnB1, btnB2, btnB3, btnB4, btnB5, btnB6, btnC1, btnC2, btnC3, btnC4, btnC5, btnC6;
-    ImageView chonngay;
-    int year, month, day;
-    TextView txtNgayduocchon;
+
     TextView TongTien = null;
-    Calendar cal;
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -38,45 +35,6 @@ public class datve extends AppCompatActivity implements View.OnClickListener, Vi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_datve);
-        Spinner spnkhuvuc = (Spinner) findViewById(R.id.spnKhuVuc);
-        Spinner spnRap = (Spinner) findViewById(R.id.spnRap);
-        Spinner spnGio = (Spinner) findViewById(R.id.spnGio);
-        TongTien = findViewById(R.id.txtTongTien);
-        //List Khu Vuc
-        List<String> khuvuc = new ArrayList<String>();
-        khuvuc.add("Hồ Chí Minh");
-        khuvuc.add("Hà Nội");
-        khuvuc.add("Vũng Tàu");
-        khuvuc.add("Đà Nẵng");
-        //List Rap
-        List<String> rap = new ArrayList<String>();
-        rap.add("Rạp con mèo");
-        rap.add("Rạp con chó kêu");
-        rap.add("Rạp con gà kêu");
-        rap.add("Rạp con ếch kêu");
-        //list Suat Chieu
-        List<String> suatchieu = new ArrayList<String>();
-        suatchieu.add("9:00");
-        suatchieu.add("11:00");
-        suatchieu.add("13:00");
-        suatchieu.add("15:00");
-        suatchieu.add("17:00");
-        suatchieu.add("19:00");
-        suatchieu.add("21:00");
-        suatchieu.add("23:00");
-
-        // Creating adapter for spinner
-        ArrayAdapter<String> khuvucAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, khuvuc);
-        ArrayAdapter<String> rapAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, rap);
-        ArrayAdapter<String> suatAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, suatchieu);
-        // Drop down layout style - list view with radio button
-        khuvucAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        rapAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        suatAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // attaching data adapter to spinner
-        spnkhuvuc.setAdapter(khuvucAdapter);
-        spnRap.setAdapter(rapAdapter);
-        spnGio.setAdapter(suatAdapter);
 
         btnA1 = findViewById(R.id.btnA1);
         btnA2 = findViewById(R.id.btnA2);
@@ -136,22 +94,6 @@ public class datve extends AppCompatActivity implements View.OnClickListener, Vi
         btnC5.setOnTouchListener(this);
         btnC6.setOnTouchListener(this);
 
-        chonngay = findViewById(R.id.img_lich);
-        txtNgayduocchon = findViewById(R.id.txtNgayduochon);
-        cal = Calendar.getInstance();
-        year = cal.get(Calendar.YEAR);
-        month = cal.get(Calendar.MONTH);
-        day = cal.get(Calendar.DAY_OF_MONTH);
-        showDate(year, month + 1, day);
-
-        //OnClick nut chon ngay
-        chonngay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showDialog(1);
-                Toast.makeText(getApplicationContext(), "Choose a day!", Toast.LENGTH_SHORT).show();
-            }
-        });
     }
 
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -166,26 +108,6 @@ public class datve extends AppCompatActivity implements View.OnClickListener, Vi
         // TODO Auto-generated method stub
     }
 
-    @Override
-    protected Dialog onCreateDialog(int id) {
-        if (id == 1) {
-            return new DatePickerDialog(this, dateSetListener, year, month, day);
-        }
-        return null;
-    }
-
-    DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
-        @Override
-        public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-            txtNgayduocchon.setText("");
-            showDate(year, month + 1, dayOfMonth);
-        }
-    };
-
-    //hien ngay
-    private void showDate(int year, int month, int day) {
-        txtNgayduocchon.setText(new StringBuilder().append(day > 9 ? day : "0" + day).append("/").append(month > 9 ? month : "0" + month).append("/").append(year));
-    }
     //OnClick ghe
     int tongtien = 0;
     int i = 0;

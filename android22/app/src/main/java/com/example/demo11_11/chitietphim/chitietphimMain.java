@@ -14,6 +14,7 @@ import com.example.demo11_11.R;
 import com.example.demo11_11.chamdiem;
 import com.example.demo11_11.danhsachphim.danhsachphimMain;
 import com.example.demo11_11.datve;
+import com.example.demo11_11.lichchieu;
 import com.example.demo11_11.video;
 import com.squareup.moshi.JsonAdapter;
 import com.squareup.moshi.Moshi;
@@ -55,7 +56,7 @@ public class chitietphimMain extends AppCompatActivity {
 
         // Tạo request lên server.
         Request request = new Request.Builder()
-                .url("http://192.168.1.26/api1/chitietphim1.php")
+                .url("http://192.168.1.150:8080/api1/chitietphim1.php")
                 .build();
 
 
@@ -90,14 +91,13 @@ public class chitietphimMain extends AppCompatActivity {
     }
 
 
-    public void datve(View view) {
-        Intent intent = new Intent(chitietphimMain.this , datve.class);
-        startActivity(intent);
-    }
-
     public void chamdiem(View view) {
         Intent intent = new Intent(chitietphimMain.this , chamdiem.class);
         startActivity(intent);
     }
 
+    public void lichchieu(View view) {
+        Intent intent = new Intent(chitietphimMain.this , lichchieu.class);
+        startActivity(intent);
+    }
 }

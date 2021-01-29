@@ -46,7 +46,7 @@ public class lichsugiaodichMain extends AppCompatActivity {
 
         // Tạo request lên server.
         Request request = new Request.Builder()
-                .url("http://192.168.43.55/api1/thanhtoan.php")
+                .url("http://192.168.1.150:8080/api1/thanhtoan.php")
                 .build();
 
 

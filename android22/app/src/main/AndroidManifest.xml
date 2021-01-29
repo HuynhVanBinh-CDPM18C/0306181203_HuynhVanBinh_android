@@ -12,7 +12,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Demo1111">
-        <activity android:name=".thongtingiaodich1.giaodich11"></activity>
+        <activity android:name=".lichchieu"></activity>
+        <activity android:name=".binhluan" />
+        <activity android:name=".thongtingiaodich1.giaodich11" />
         <activity android:name=".chamdiem" />
         <activity android:name=".taikhoanvb" />
         <activity android:name=".datve" />
