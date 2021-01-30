@@ -4,12 +4,15 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.transition.Slide;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,7 +38,10 @@ import com.squareup.moshi.Types;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -43,10 +49,15 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
+import static com.example.demo11_11.R.drawable.h1;
+
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
     private Intent intent;
+    private List<slide> lstSlides ;
+    private TabLayout indicator;
+    private ViewPager sliderpager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +97,46 @@ public class MainActivity extends AppCompatActivity {
         });
         psc();
         pdc();
+        iniView();
+        iniSlider();
 
+    }
+    private void iniView() {
+        sliderpager = findViewById(R.id.slider_pager);
+        indicator = findViewById(R.id.indicator);
+    }
+    private void iniSlider() {
+        lstSlides = new ArrayList<>() ;
+        lstSlides.add(new slide(R.drawable.h1,"Chị mười ba \n Hành Động"));
+        lstSlides.add(new slide(R.drawable.h2,"Cua lại vợ bầu \n Tình cảm"));
+        lstSlides.add(new slide(R.drawable.h3,"Ròm \n Hành động"));
+        lstSlides.add(new slide(R.drawable.h4,"Tuần trăng máu \n Kinh dị"));
+        SlidePagerAdapter adapter = new SlidePagerAdapter(this,lstSlides);
+        sliderpager.setAdapter(adapter);
+        // setup timer
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new SliderTimer(),1000,3000);
+        indicator.setupWithViewPager(sliderpager,true);
+    }
+    class SliderTimer extends TimerTask {
+
+
+        @Override
+        public void run() {
+
+            MainActivity.this.runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    if (sliderpager.getCurrentItem()<lstSlides.size()-1) {
+                        sliderpager.setCurrentItem(sliderpager.getCurrentItem()+1);
+                    }
+                    else
+                        sliderpager.setCurrentItem(0);
+                }
+            });
+
+
+        }
     }
     public void psc()
     {
@@ -98,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Tạo request lên server.
         Request sapchieu = new Request.Builder()
-                .url("http://192.168.1.150:8080/api1/apiphimsapchieu.php")
+                .url("http://10.5.50.144/api1/apiphimsapchieu.php")
                 .build();
 
         // Khởi tạo OkHttpClient để lấy dữ liệu.
@@ -149,7 +199,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Tạo request lên server.
         Request request = new Request.Builder()
-                .url("http://192.168.1.150:8080/api1/api.php")
+                .url("http://10.5.50.144/api1/api.php")
                 .build();
 
 

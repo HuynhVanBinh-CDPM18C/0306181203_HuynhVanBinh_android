@@ -11,10 +11,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.demo11_11.R;
-import com.example.demo11_11.binhluan;
+import com.example.demo11_11.bl;
 import com.example.demo11_11.chamdiem;
-import com.example.demo11_11.danhsachphim.danhsachphimMain;
-import com.example.demo11_11.datve;
 import com.example.demo11_11.lichchieu;
 import com.example.demo11_11.video;
 import com.squareup.moshi.JsonAdapter;
@@ -40,7 +38,6 @@ public class chitietphimMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.chitietphim);
 
-
         chitietpdc();
     }
     public void chitietpdc() {
@@ -57,7 +54,7 @@ public class chitietphimMain extends AppCompatActivity {
 
         // Tạo request lên server.
         Request request = new Request.Builder()
-                .url("http://192.168.1.150:8080/api1/chitietphim1.php")
+                .url("http://10.5.50.144/api1/chitietphim1.php")
                 .build();
 
 
@@ -102,8 +99,9 @@ public class chitietphimMain extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void binhluan(View view) {
-        Intent intent = new Intent(chitietphimMain.this , binhluan.class);
+
+    public void binhLuan(View view) {
+        Intent intent = new Intent(chitietphimMain.this , bl.class);
         startActivity(intent);
     }
 }

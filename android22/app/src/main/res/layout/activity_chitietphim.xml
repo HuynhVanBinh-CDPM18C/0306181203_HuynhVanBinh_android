@@ -165,13 +165,14 @@
             android:text="Bình Luận"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
-            android:onClick="binhluan"
+            android:onClick="binhLuan"
             app:layout_constraintBottom_toTopOf="@+id/textView15"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toEndOf="@+id/btnLichChieu"
             app:layout_constraintTop_toBottomOf="@+id/ibHinh"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="OnClick" />
 
     </android.support.constraint.ConstraintLayout>
 

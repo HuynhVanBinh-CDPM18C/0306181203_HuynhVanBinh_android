@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bl">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edit_formBinhLuan_ND"
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:ems="10"
+            android:hint="Nội dung"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/edit_formBinhLuan_DG"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Điểm"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btn_binhluan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Binh Luan" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/showbinhluan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_binhluan" />
+    </LinearLayout>
+
+</FrameLayout>
